@@ -1,0 +1,4 @@
+module cmp
+(
+	input arith_funct3_t
+);

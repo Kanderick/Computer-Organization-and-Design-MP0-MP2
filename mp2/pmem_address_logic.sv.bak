@@ -1,0 +1,18 @@
+module pmem_address_logic
+(
+	input lru,
+	input tag_0,
+	input tag_1,
+	input set,
+	input pmem_addr_sel,
+	input [31:0] mem_addr,
+	
+	output [31:0] pmem_address
+);
+
+always_comb
+begin
+
+end
+
+endmodule : pmem_address_logic

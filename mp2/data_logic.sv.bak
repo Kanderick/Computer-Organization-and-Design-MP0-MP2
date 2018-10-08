@@ -1,0 +1,12 @@
+module data_logic
+(
+	input [255:0] data_out,
+	input [4:0] index,
+	input [3:0] mem_byte_enable,
+	input [31:0] mem_wdata,
+	
+	output logic [31:0] mem_rdata,
+	output logic [255:0] data_cache
+);
+
+endmodule : data_logic

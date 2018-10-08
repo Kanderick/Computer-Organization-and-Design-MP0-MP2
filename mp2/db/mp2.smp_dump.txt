@@ -1,0 +1,25 @@
+
+State Machine - |mp2|cache:cache|cache_control:control|state
+Name state.idle state.pmem_to_cache state.write_to_pmem 
+state.idle 0 0 0 
+state.write_to_pmem 1 0 1 
+state.pmem_to_cache 1 1 0 
+
+State Machine - |mp2|cpu:cpu|cpu_control:control|state
+Name state.s_reg state.s_jalr state.s_jal state.str2 state.str1 state.ldr2 state.ldr1 state.br state.s_auipc state.calc_addr state.s_lui state.s_imm state.decode state.fetch3 state.fetch2 state.fetch1 
+state.fetch1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.fetch2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.fetch3 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.decode 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.s_imm 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.s_lui 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.calc_addr 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.s_auipc 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.br 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.ldr1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.ldr2 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.str1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.str2 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.s_jal 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.s_jalr 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.s_reg 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
